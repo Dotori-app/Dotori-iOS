@@ -5,7 +5,9 @@ import ProjectDescriptionHelpers
 let project = Project.module(
     name: ModulePaths.Domain.ViolationDomain.rawValue,
     targets: [
-        .interface(module: .domain(.ViolationDomain)),
+        .interface(module: .domain(.ViolationDomain), dependencies: [
+            .domain(target: .BaseDomain, type: .interface)
+        ]),
         .implements(module: .domain(.ViolationDomain), dependencies: [
             .domain(target: .ViolationDomain, type: .interface),
             .domain(target: .BaseDomain)

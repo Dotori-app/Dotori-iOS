@@ -19,7 +19,7 @@ final class ViolationRepositoryTests: XCTestCase {
 
     func test_FetchMyViolationList() async throws {
         let expected: [ViolationEntity] = [
-            ViolationEntity(id: 1, rule: "기숙사 탈주", createDate: .init())
+            ViolationEntity(id: 1, rule: .firearms, createDate: .init())
         ]
         remoteViolationDataSource.fetchMyViolationListHandler = { expected }
         XCTAssertEqual(remoteViolationDataSource.fetchMyViolationListCallCount, 0)

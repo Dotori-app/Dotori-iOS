@@ -1,10 +1,11 @@
+import BaseDomainInterface
 import DateUtility
 import Foundation
 import ViolationDomainInterface
 
 struct ViolationResponseDTO: Decodable {
     let id: Int
-    let rule: String
+    let rule: ViolationType
     let createdDate: String
 }
 
