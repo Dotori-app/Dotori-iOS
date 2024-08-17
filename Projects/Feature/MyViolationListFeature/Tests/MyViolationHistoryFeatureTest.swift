@@ -25,7 +25,7 @@ final class MyViolationHistoryFeatureTests: XCTestCase {
         let expectation = XCTestExpectation(description: "testFetchMyViolationList_Store_State")
         expectation.expectedFulfillmentCount = 2
         let expected: [ViolationModel] = [
-            .init(id: 1, rule: "긱사 탈주", createDate: .init())
+            .init(id: 1, rule: .alcohol, createDate: .init())
         ]
         fetchMyViolationListUseCase.fetchMyViolationListHandler = { expected }
 

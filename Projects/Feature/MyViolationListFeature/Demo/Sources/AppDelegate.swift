@@ -15,9 +15,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         let fetchMyViolationListUseCase = FetchMyViolationListUseCaseSpy()
         fetchMyViolationListUseCase.fetchMyViolationListHandler = {
             [
-                .init(id: 1, rule: "긱사 탈출", createDate: .init()),
-                .init(id: 2, rule: "라면 취식", createDate: .init()),
-                .init(id: 2, rule: "대충 긴글대충 긴글대충 긴글대충 긴글대충 긴글대충 긴글", createDate: .init())
+                .init(id: 1, rule: .firearms, createDate: .init()),
+                .init(id: 2, rule: .alcohol, createDate: .init()),
+                .init(id: 2, rule: .cleanCounditionBad, createDate: .init())
             ]
         }
         let store = MyViolationListStore(
